@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+    Comment here.
+
+-->
+
+<mx:HSlider xmlns="*"
+		xmlns:mx="http://www.adobe.com/2006/mxml"
+		minimum="0" maximum="255" 
+		snapInterval="1"
+		liveDragging="true"
+		tickInterval="32"
+/>

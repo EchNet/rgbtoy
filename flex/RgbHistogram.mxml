@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+    Comment here.
+
+-->
+
+<mx:Canvas xmlns="*"
+		xmlns:mx="http://www.adobe.com/2006/mxml">
+
+    <mx:Script>
+        [Bindable]
+		public var red:uint;
+
+        [Bindable]
+		public var green:uint;
+
+        [Bindable]
+		public var blue:uint;
+
+        [Bindable]
+		public var rgb:uint;
+
+        [Bindable]
+        public var barGap:int = 0;
+
+        [Bindable]
+        public var barThickness:int = 10;
+    </mx:Script>
+
+    <mx:Spacer x="5" width="256"/>
+
+    <RgbCanvas y="10" x="5"
+            height="{barThickness}" width="{red}"
+            red="{red}" green="0" blue="0"/>
+
+    <RgbCanvas y="{10 + barThickness + barGap}" x="5"
+            height="{barThickness}" width="{green}"
+            red="0" green="{green}" blue="0"/>
+
+    <RgbCanvas y="{10 + (barThickness + barGap) * 2}" x="5"
+            height="{barThickness}" width="{blue}"
+            red="0" green="0" blue="{blue}"/>
+
+    <mx:Canvas y="0" x="0"
+            height="{20 + (barThickness * 3) + (barGap * 2)}" width="5"
+            backgroundColor="black"/>
+
+</mx:Canvas>
